@@ -10,6 +10,34 @@
     },
     "dnsLabelPrefix": {
       "value": "cc"
+    },
+    "name": {
+      "value": "AZTestWebdemo"
+    },
+    "hostingPlanName": {
+      "value": "ServicePlan4ab1a3a1-9975"
+    },
+    "hostingEnvironment": {
+      "value": ""
+    },
+    "location": {
+      "value": "Central US"
+    },
+    "sku": {
+      "value": "Standard"
+    },
+    "workerSize": {
+      "value": "0"
+    },
+    "serverFarmResourceGroup": {
+      "value": "AZTestWebdemo"
+    },
+    "skuCode": {
+      "value": "S1"
+    },
+    "subscriptionId": {
+      "value": "5dd10c27-d03a-433d-ade3-e62f1c6dd5a4"
     }
+
   }
 }

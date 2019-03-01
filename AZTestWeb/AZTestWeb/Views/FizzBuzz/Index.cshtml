@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@for (var i = 1; i <= 100; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+    {
+    <div>FizzBuzz</div>
+    }
+    else if (i % 3 == 0)
+    {
+        <div>Fizz</div>
+    }
+    else if (i % 3 == 0)
+    {
+        <div>Buzz</div>
+    }
+    else
+    {
+        <div>@i</div>
+    }
+}
+

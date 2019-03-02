@@ -27,5 +27,5 @@ spec:
     type:LoadBalancer
     ports:80
     selector:
-    app:Test-992
+    app: Test-992
     

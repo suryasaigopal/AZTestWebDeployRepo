@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Test-992-deployment
+  labels:
+        app: Test-992
+spec:
+  selector:
+    matchLabels:
+      app: Test-992
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: Test-992
+    spec:
+      containers:
+      - name: Test-992
+        image: suryasaigopal/AZTestWeb:latest  
+        ports:
+        - containerPort: 80
+ apiVersion: v1
+ kind: Service
+ metadata:
+   name: Test-992
+  spec:
+    type:LoadBalancer
+    ports:80
+    selector:
+    app:Test-992
+    

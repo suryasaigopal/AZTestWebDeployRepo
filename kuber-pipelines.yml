@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Test-992-deployment
+  name: Test-992
   labels:
         app: Test-992
 spec:

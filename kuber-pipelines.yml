@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kuber-pipelines
+  name: kuber-pipelines-deployment
   labels:
         app: kuber-pipelines
 spec:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kuber-pipelines
-        image: suryasaigopal/aztestweb:#{Build.BuildId)}#
+        image: suryasaigopal/aztestweb:#{Build.BuildId}#
         ports:
         - containerPort: 80
 ---

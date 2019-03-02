@@ -29,4 +29,3 @@ spec:
     ports: 80
     selector:
     app: kuber-pipelines
-    

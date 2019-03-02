@@ -17,15 +17,15 @@ spec:
       containers:
       - name: Test-992
         image: suryasaigopal/AZTestWeb:latest  
-        ports:
-        - containerPort: 80
+        ports: 
+        - containerPort: 6379
  apiVersion: v1
  kind: Service
  metadata:
    name: Test-992
   spec:
-    type:LoadBalancer
-    ports:80
+    type: LoadBalancer
+    ports: 80
     selector:
     app: Test-992
     

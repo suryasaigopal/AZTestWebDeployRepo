@@ -32,35 +32,3 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: AZTestWeb-deployment
-  labels:
-        app: AZTestWeb
-spec:
-  selector:
-    matchLabels:
-      app: AZTestWeb
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: AZTestWeb
-    spec:
-      containers:
-      - name: AZTestWeb
-        image: suryasaigopal/AZTestWeb:latest  
-        ports:
-        - containerPort: 80
- apiVersion: v1
- kind: Service
- metadata:
-   name: AZTestWeb
-  spec:
-    type:LoadBalancer
-    ports:80
-    selector:
-    app:AZTestWeb

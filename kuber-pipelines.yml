@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Test-992
+  name: kuber-pipelines
   labels:
-        app: Test-992
+        app: kuber-pipelines
 spec:
   selector:
     matchLabels:
-      app: Test-992
+      app: kuber-pipelines
   replicas: 1
   template:
     metadata:
       labels:
-        app: Test-992
+        app: kuber-pipelines
     spec:
       containers:
-      - name: Test-992
+      - name: kuber-pipelines
         image: suryasaigopal/AZTestWeb:latest
         ports:
         - containerPort: 80
@@ -23,10 +23,10 @@ spec:
  apiVersion: v1
  kind: Service
  metadata:
-   name: Test-992
+   name: kuber-pipelines
   spec:
     type: LoadBalancer
     ports: 80
     selector:
-    app: Test-992
+    app: kuber-pipelines
     

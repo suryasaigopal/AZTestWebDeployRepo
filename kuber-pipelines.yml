@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: Test-992
-        image: suryasaigopal/AZTestWeb:latest  
-        ports: 
+        image: suryasaigopal/AZTestWeb:latest
+        ports:
         - containerPort: 80
 ---
  apiVersion: v1

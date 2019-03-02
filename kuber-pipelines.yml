@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kuber-pipelines
-        image: suryasaigopal/AZTestWeb:latest
+        image: suryasaigopal/aztestweb:#{Build.BuildId)}#
         ports:
         - containerPort: 80
 ---

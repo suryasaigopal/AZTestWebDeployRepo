@@ -236,11 +236,7 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/Sites', parameters('name'))]"
-      ],
-      "copy": {
-        "name": "webPortalSlot",
-        "count": "[length(parameters('hostingEnvironment'))]"
-      }
+      ]
     },
     {
       "apiVersion": "2016-09-01",

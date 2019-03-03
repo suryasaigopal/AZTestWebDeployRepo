@@ -14,6 +14,9 @@
     "name": {
       "value": "Test-992"
     },
+    "slotname": {
+      "value": "staging"
+    },
     "hostingPlanName": {
       "value": "Saidemoplan"
     },

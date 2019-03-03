@@ -46,6 +46,9 @@
     "name": {
       "type": "string"
     },
+    "slotname": {
+      "type": "string"
+    },
     "hostingPlanName": {
       "type": "string"
     },
@@ -217,6 +220,27 @@
       "dependsOn": [
         "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
       ]
+    },
+    {
+      "apiVersion": "2016-03-01",
+      "type": "Microsoft.Web/sites/slots",
+      "name": "\"[concat(parameters('name'), '-', parameters('slotname'))]",
+      "kind": "app",
+      "location": "[parameters('location')]",
+      "comments": "This specifies the web app slots.",
+      "tags": {
+        "displayName": "WebAppSlots"
+      },
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/Sites', parameters('name'))]"
+      ],
+      "copy": {
+        "name": "webPortalSlot",
+        "count": "[length(parameters('hostingEnvironment'))]"
+      }
     },
     {
       "apiVersion": "2016-09-01",

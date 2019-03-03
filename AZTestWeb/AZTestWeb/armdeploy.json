@@ -224,7 +224,7 @@
     {
       "apiVersion": "2016-03-01",
       "type": "Microsoft.Web/sites/slots",
-      "name": "\"[concat(parameters('name'), '-', parameters('slotname'))]",
+      "name": "[parameters('slotname')]",
       "kind": "app",
       "location": "[parameters('location')]",
       "comments": "This specifies the web app slots.",

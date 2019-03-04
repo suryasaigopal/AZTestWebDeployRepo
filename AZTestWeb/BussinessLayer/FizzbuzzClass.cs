@@ -11,16 +11,15 @@ namespace BussinessLayer
         public List<string> logicFizzBuzz()
         {
             List<string> lstfizzbuzz = new List<string>();
+
             for (int i = 1; i <= 100; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
-                    lstfizzbuzz.Add("Fizz Buzz");
-                else if (i % 3 == 0)
-                    lstfizzbuzz.Add("Fizz");
-                else if (i % 5 == 0)
-                    lstfizzbuzz.Add("Buzz");
-                else
-                    lstfizzbuzz.Add(i.ToString());
+                string strResult = "";
+
+                if (i % 3 == 0) strResult = "Fizz ";
+                if (i % 5 == 0) strResult += "Buzz";
+                if (strResult.Length == 0) strResult = i.ToString().Trim();
+                lstfizzbuzz.Add(strResult);
 
             }
             return lstfizzbuzz;

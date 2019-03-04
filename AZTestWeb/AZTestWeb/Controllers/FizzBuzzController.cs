@@ -12,7 +12,7 @@ namespace AZTestWeb.Controllers
         // GET: FizzBuzz
         FizzbuzzClass oFizz = new FizzbuzzClass();
         public ActionResult Index()
-        {
+        {   
             List<string> lstfizzbuzz = oFizz.logicFizzBuzz();
             ViewBag.collectionFizzBuzz = lstfizzbuzz;
             return View();
